@@ -34,7 +34,7 @@ const MainPage: React.FC = (): JSX.Element => {
                         <TypeAnimation
                             sequence={[
                                 t(
-                                    'Обычный человек, мечтающий стать программистом Fullstack Web Developer 🚀',
+                                    'Обычный парень, мечтающий стать Fullstack Web разработчиком 🚀',
                                 ),
                             ]}
                             speed={80}
@@ -66,8 +66,46 @@ const MainPage: React.FC = (): JSX.Element => {
                         non proident, sunt in culpa qui officia deserunt mollit
                         anim id est laborum.
                     </BioPart>
-                    <BioPart right title={t('Biography')}>
-                        <HStack max>
+                    <BioPart right title={t('Old Biography')}>
+                        <HStack max gap={'16'}>
+                            <Text
+                                text={t(
+                                    'Lorem ipsum dolor sit amet, consectetur\n' +
+                                        '                                adipiscing elit, sed do eiusmod tempor\n' +
+                                        '                                incididunt ut labore et dolore magna aliqua. Ut\n' +
+                                        '                                enim ad minim veniam, quis nostrud exercitation\n' +
+                                        '                                ullamco laboris nisi ut aliquip ex ea commodo\n' +
+                                        '                                consequat. Duis aute irure dolor in\n' +
+                                        '                                reprehenderit in voluptate velit esse cillum\n' +
+                                        '                                dolore eu fugiat nulla pariatur. Excepteur sint\n' +
+                                        '                                occaecat cupidatat non proident, sunt in culpa\n' +
+                                        '                                qui officia deserunt mollit anim id est laborum.',
+                                )}
+                            />
+                            <HStack
+                                max
+                                justify={'center'}
+                                className={cls.oldFoto}
+                            >
+                                <Avatar
+                                    alt={'foto'}
+                                    src={'https://i.imgur.com/x4YlWAO.jpg'}
+                                />
+                            </HStack>
+                        </HStack>
+                    </BioPart>
+                    <BioPart title={t('New Biography')}>
+                        <HStack max gap={'16'}>
+                            <HStack
+                                max
+                                justify={'center'}
+                                className={cls.newFoto}
+                            >
+                                <Avatar
+                                    alt={'foto'}
+                                    src={'https://i.imgur.com/x4YlWAO.jpg'}
+                                />
+                            </HStack>
                             <div>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
@@ -80,12 +118,6 @@ const MainPage: React.FC = (): JSX.Element => {
                                 occaecat cupidatat non proident, sunt in culpa
                                 qui officia deserunt mollit anim id est laborum.
                             </div>
-                            <Card className={cls.newFoto}>
-                                <Avatar
-                                    alt={'foto'}
-                                    src={'https://i.imgur.com/x4YlWAO.jpg'}
-                                />
-                            </Card>
                         </HStack>
                     </BioPart>
                     <Button variant={'accept'}>

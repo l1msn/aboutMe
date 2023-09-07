@@ -1,18 +1,8 @@
 .LangSwitcher {
-    transition: 0.2s;
+    transition: 0.3s;
+    fill: var(--icon);
 
     &:hover {
-        opacity: 0.8;
-        animation: animate 0.3s linear;
-    }
-
-    @keyframes animate {
-        0% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0.8;
-        }
+        fill: var(--accent)
     }
 }

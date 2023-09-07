@@ -5,3 +5,15 @@
 .greeting {
     text-align: center;
 }
+
+.newFoto {
+    border-right: 2px solid var(--accent);
+    min-width: 62px;
+    min-height: 22.5%;
+}
+
+.oldFoto {
+    border-left: 2px solid var(--accent);
+    min-width: 62px;
+    min-height: 22.5%;
+}

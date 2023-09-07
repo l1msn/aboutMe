@@ -2,9 +2,7 @@ import React, { JSX, memo } from 'react';
 import classNames from '@/shared/lib/classNames/classNames';
 import cls from './LangSwitcher.module.scss';
 import { useTranslation } from 'react-i18next';
-import LangButton from '../consts/LangButton';
-import RuIcon from '@/shared/assets/icons/lang-ru.svg';
-import EnIcon from '@/shared/assets/icons/lang-en.svg';
+import TranslationIcon from '@/shared/assets/icons/translate-icon.svg';
 import Icon from '@/shared/ui/Icon';
 
 interface ILangSwitcherProps {
@@ -21,7 +19,9 @@ const LangSwitcher: React.FC<ILangSwitcherProps> = memo(
 
         return (
             <Icon
-                Svg={i18n.language == LangButton.EN ? EnIcon : RuIcon}
+                width={50}
+                height={50}
+                Svg={TranslationIcon}
                 clickable
                 onClick={toggleLang}
                 className={classNames(cls.LangSwitcher, {}, [className])}

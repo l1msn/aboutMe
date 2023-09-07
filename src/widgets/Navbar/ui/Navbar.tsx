@@ -9,6 +9,8 @@ import { useTranslation } from 'react-i18next';
 import LogoIcon from '@/shared/assets/icons/logo-icon.svg';
 import Icon from '@/shared/ui/Icon';
 import { TypeAnimation } from 'react-type-animation';
+import AppLink from '@/shared/ui/AppLink';
+import { RoutePaths } from '@/shared/consts/routerPaths';
 
 interface INavbarProps {
     className?: string;
@@ -20,36 +22,44 @@ const Navbar: React.FC<INavbarProps> = ({
     const { t, i18n } = useTranslation();
 
     return (
-        <menu className={classNames(cls.navbar, {}, [className])}>
+        <header className={classNames(cls.navbar, {}, [className])}>
             <HStack max justify={'between'}>
-                <HStack gap={'8'} max className={cls.logo}>
-                    <Icon
-                        height={48}
-                        width={48}
-                        Svg={LogoIcon}
-                        className={cls.logoImg}
-                    />
-                    {i18n.language == 'en' && (
-                        <TypeAnimation
-                            sequence={[t('Alexander Sadykov')]}
-                            speed={50}
-                            style={{ fontSize: '22px' }}
+                <AppLink to={RoutePaths.getRouteMain()}>
+                    <HStack gap={'8'} max className={cls.logo}>
+                        <Icon
+                            height={54}
+                            width={54}
+                            Svg={LogoIcon}
+                            className={cls.logoImg}
                         />
-                    )}
-                    {i18n.language == 'ru' && (
-                        <TypeAnimation
-                            sequence={[t('Александр Садыков')]}
-                            speed={50}
-                            style={{ fontSize: '23px' }}
-                        />
-                    )}
-                </HStack>
-                <VStack>
+                        {i18n.language == 'en' && (
+                            <TypeAnimation
+                                sequence={[t('Alexander Sadykov')]}
+                                speed={50}
+                                style={{
+                                    fontSize: '23px',
+                                }}
+                                wrapper={'h1'}
+                            />
+                        )}
+                        {i18n.language == 'ru' && (
+                            <TypeAnimation
+                                sequence={[t('Александр Садыков')]}
+                                speed={50}
+                                style={{
+                                    fontSize: '23px',
+                                }}
+                                wrapper={'h1'}
+                            />
+                        )}
+                    </HStack>
+                </AppLink>
+                <HStack>
                     <LangSwitcher />
                     <ThemeSwitcher />
-                </VStack>
+                </HStack>
             </HStack>
-        </menu>
+        </header>
     );
 };
 

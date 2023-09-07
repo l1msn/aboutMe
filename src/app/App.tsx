@@ -4,22 +4,31 @@ import AppRouter from '@/app/providers/Router';
 import Navbar from '@/widgets/Navbar';
 import { VStack } from '@/shared/ui/Stack';
 import Preloader from '@/widgets/Preloader';
+import CircleIndicator from '@/widgets/CircleIndicator';
+import Footer from '@/widgets/Footer';
 
 interface IAppProps {
     className?: string;
 }
 
 const App: React.FC<IAppProps> = ({ className }: IAppProps): JSX.Element => {
-    const [loading, setIsLoading] = useState<boolean>(false);
+    const [loading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        setIsLoading(true);
         setTimeout(() => {
-            setIsLoading((prevState) => !prevState);
+            setIsLoading(false);
+            localStorage.setItem(
+                'preloader',
+                JSON.stringify({ preloader: true }),
+            );
         }, 2000);
-    }, []);
 
-    if (loading) {
+        return () => {
+            localStorage.removeItem('preloader');
+        };
+    }, [loading]);
+
+    if (loading && !localStorage.getItem('preloader')) {
         return (
             <div className={classNames('app', {}, [className])}>
                 <div className="preloader">
@@ -31,12 +40,15 @@ const App: React.FC<IAppProps> = ({ className }: IAppProps): JSX.Element => {
 
     return (
         <div className={classNames('app', {}, [className])}>
-            <div className="content-page">
-                <VStack max align={'center'}>
-                    <Navbar />
-                    <AppRouter />
-                </VStack>
-            </div>
+            <CircleIndicator>
+                <div className="content-page">
+                    <VStack max align={'center'}>
+                        <Navbar />
+                        <AppRouter />
+                        <Footer />
+                    </VStack>
+                </div>
+            </CircleIndicator>
         </div>
     );
 };

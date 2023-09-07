@@ -25,6 +25,7 @@
     height: 100vh;
 }
 
+
 *::-webkit-scrollbar {
     width: 12px;               /* ширина всей полосы прокрутки */
     height: 8px;
@@ -40,8 +41,7 @@
 }
 
 .app *::-webkit-scrollbar {
-    width: 12px;               /* ширина всей полосы прокрутки */
-    height: 8px;
+    width: 0;             /* ширина всей полосы прокрутки */
 }
 
 .app *::-webkit-scrollbar-track {
