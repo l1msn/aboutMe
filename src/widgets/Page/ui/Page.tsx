@@ -14,9 +14,6 @@ interface IPageProps extends TestProps {
 
 const Page: React.FC<IPageProps> = (props: IPageProps): JSX.Element => {
     const { className, children, onScrollEnd } = props;
-    const dispatch = useAppDispatch();
-
-    const { pathname } = useLocation();
 
     return (
         <main

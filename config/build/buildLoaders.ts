@@ -15,6 +15,11 @@ export function buildLoaders(options: IBuildOptions): webpack.RuleSetRule[] {
         loader: '@svgr/webpack',
     };
 
+    const GLBLoader: webpack.RuleSetRule = {
+        test: /\.(glb|gltf)$/,
+        loader: 'file-loader'
+    };
+
     const FileLoader: webpack.RuleSetRule = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
@@ -30,6 +35,6 @@ export function buildLoaders(options: IBuildOptions): webpack.RuleSetRule[] {
     const CSSLoader = BuildCSSLoader(options.isDev);
 
     return [
-        FileLoader, SVGLoader, tsxCodeBabelLoader, codeBabelLoader, CSSLoader,
+        FileLoader, SVGLoader, GLBLoader, tsxCodeBabelLoader, codeBabelLoader, CSSLoader,
     ];
 }

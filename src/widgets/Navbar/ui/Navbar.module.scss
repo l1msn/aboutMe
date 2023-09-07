@@ -1,0 +1,22 @@
+.navbar {
+    width: 100%;
+}
+
+.logoImg {
+    transform: rotate(25deg);
+    fill: var(--icon)
+}
+
+.logo {
+    cursor: pointer;
+
+    .logoImg {
+        transform: rotate(-15deg);
+    }
+
+    &:hover {
+        .logoImg {
+            transform: rotate(15deg);
+        }
+    }
+}

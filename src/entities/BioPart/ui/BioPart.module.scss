@@ -1,0 +1,9 @@
+.title {
+    text-decoration: underline;
+    justify-content: space-between;
+    display: flex;
+}
+
+.right {
+    flex-direction: row-reverse;
+}

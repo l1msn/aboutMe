@@ -2,10 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 li {
     list-style-type: none;
+}
+
+canvas {
+    display: block;
 }
 
 input,
