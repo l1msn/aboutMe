@@ -3,7 +3,7 @@ import {IBuildOptions} from './types/config';
 
 export function buildResolvers(options: IBuildOptions): ResolveOptions {
     return {
-        extensions: ['.tsx', '.ts', '.js', '.glb','.jpg'],
+        extensions: ['.tsx', '.ts', '.js', '.glb','.jpg', '.ico'],
         preferAbsolute: true,
         modules: [options.paths.src, 'node_modules'],
         alias: {'@': options.paths.src},

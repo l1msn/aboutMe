@@ -53,6 +53,7 @@ export function buildPlugins({paths, isDev, apiUrl, project}: IBuildOptions): we
         plugins.push(new CopyPlugin({
             patterns: [
                 {from: paths.locales, to: paths.buildLocales},
+                {from: paths.model, to: paths.buildModel}
             ],
         }))
     }

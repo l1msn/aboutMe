@@ -6,7 +6,9 @@ interface IBuildPaths {
     html: string;
     src: string;
     favicon: string;
+    model: string;
     locales: string,
+    buildModel: string;
     buildLocales: string,
 }
 
