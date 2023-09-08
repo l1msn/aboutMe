@@ -11,6 +11,8 @@ function webpackConfigStorybook({ config }: { config: webpack.Configuration }) {
         favicon: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
         locales: '',
+        model: '',
+        buildModel: '',
         buildLocales: '',
     };
 

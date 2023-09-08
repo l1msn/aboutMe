@@ -11,6 +11,8 @@ function config(env: IBuildEnv): webpack.Configuration {
         favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
         src: path.resolve(__dirname, 'src'),
         locales: path.resolve(__dirname, 'public', 'locales'),
+        model: path.resolve(__dirname, 'public', 'dog.glb'),
+        buildModel: path.resolve(__dirname, 'dist'),
         buildLocales: path.resolve(__dirname, 'dist', 'locales'),
     };
 
