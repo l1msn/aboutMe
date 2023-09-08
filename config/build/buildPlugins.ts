@@ -13,6 +13,7 @@ export function buildPlugins({paths, isDev, apiUrl, project}: IBuildOptions): we
     const plugins =
         [new HTMLWebpackPlugin({
             template: paths.html,
+            favicon: paths.favicon
         }),
         new webpack.ProgressPlugin(),
         new webpack.DefinePlugin({

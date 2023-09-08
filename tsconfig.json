@@ -32,6 +32,6 @@
     "./vite.config.ts",
     "./config/",
     "./webpack.config.ts",
-    "public/*.glb"
+    "./public/"
   ]
 }

@@ -8,7 +8,7 @@ interface IMotionProps {
 
 const Motion: React.FC<IMotionProps> = ({
     children,
-    delay = 0.3,
+    delay = 0.7,
 }: IMotionProps): JSX.Element => {
     return (
         <motion.div

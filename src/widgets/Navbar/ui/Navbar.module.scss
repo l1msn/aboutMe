@@ -2,21 +2,23 @@
     width: 100%;
 }
 
+.additional {
+    button {
+        display: flex;
+    }
+}
+
 .logoImg {
-    transform: rotate(25deg);
-    fill: var(--icon)
+    fill: var(--icon);
 }
 
 .logo {
     cursor: pointer;
+}
 
-    .logoImg {
-        transform: rotate(-15deg);
-    }
-
+.iconGitHub {
+    fill: var(--icon);
     &:hover {
-        .logoImg {
-            transform: rotate(15deg);
-        }
+        fill: var(--accent)
     }
 }

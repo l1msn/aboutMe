@@ -1,6 +1,10 @@
 .card {
     padding: 24px;
     background: var(--card-bg);
+
+    @media screen and (max-width: 400px) {
+        background-color: red;
+    }
 }
 
 .max {
