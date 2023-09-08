@@ -5,6 +5,7 @@ import useAppDispatch from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useLocation } from 'react-router-dom';
 import PAGE_ID from '@/shared/consts/ids';
 import TestProps from '@/shared/types/tests';
+import Motion from '@/shared/ui/Motion';
 
 interface IPageProps extends TestProps {
     className?: string;
@@ -14,18 +15,17 @@ interface IPageProps extends TestProps {
 
 const Page: React.FC<IPageProps> = (props: IPageProps): JSX.Element => {
     const { className, children, onScrollEnd } = props;
-    const dispatch = useAppDispatch();
-
-    const { pathname } = useLocation();
 
     return (
-        <main
-            className={classNames(cls.page, {}, [className])}
-            id={PAGE_ID}
-            data-testid={props['data-testid'] ?? 'Page'}
-        >
-            {children}
-        </main>
+        <Motion>
+            <main
+                className={classNames(cls.page, {}, [className])}
+                id={PAGE_ID}
+                data-testid={props['data-testid'] ?? 'Page'}
+            >
+                {children}
+            </main>
+        </Motion>
     );
 };
 

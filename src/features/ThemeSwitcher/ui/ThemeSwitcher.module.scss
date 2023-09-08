@@ -1,21 +1,8 @@
 .icon {
-    transition: 0.2s;
+    transition: 0.3s;
+    fill: var(--icon);
 
     &:hover {
-        transform: scale(1.01);
-        opacity: 0.8;
-        animation: animate 0.3s linear;
+        fill: var(--accent)
     }
-
-    @keyframes animate {
-        0% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0.8;
-        }
-    }
-
-    fill: var(--inverted-primary-color)
 }

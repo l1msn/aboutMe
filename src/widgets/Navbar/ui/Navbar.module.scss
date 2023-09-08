@@ -1,0 +1,24 @@
+.navbar {
+    width: 100%;
+}
+
+.additional {
+    button {
+        display: flex;
+    }
+}
+
+.logoImg {
+    fill: var(--icon);
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.iconGitHub {
+    fill: var(--icon);
+    &:hover {
+        fill: var(--accent)
+    }
+}

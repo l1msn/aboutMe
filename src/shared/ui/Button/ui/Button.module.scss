@@ -58,7 +58,7 @@
 }
 
 .filled {
-    background: var(--light-bg);
+    background: var(--light);
     border: none;
     outline: none;
     padding: 8px 16px;
@@ -66,7 +66,7 @@
 }
 
 .cancel {
-    background: var(--light-bg);
+    background: var(--light);
     color: var(--cancel);
     border: none;
     outline: none;
@@ -75,7 +75,7 @@
 }
 
 .accept {
-    background: var(--light-bg);
+    background: var(--light);
     color: var(--save);
     border: none;
     outline: none;
@@ -85,7 +85,7 @@
 
 .outline {
     background: none;
-    border: 2px solid var(--icon-redesigned);
+    border: 2px solid var(--icon);
     padding: 8px 16px;
     border-radius: 12px;
 }

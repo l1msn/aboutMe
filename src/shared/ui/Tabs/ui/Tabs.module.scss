@@ -11,7 +11,7 @@
     &:hover {
         transform: scale(1.05);
         animation: animate 0.3s;
-        border-color: var(--icon-redesigned);
+        border-color: var(--icon);
     }
 
     @keyframes animate {

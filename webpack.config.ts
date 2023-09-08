@@ -8,6 +8,7 @@ function config(env: IBuildEnv): webpack.Configuration {
         entry: path.resolve(__dirname, 'src', 'index.tsx'),
         build: path.resolve(__dirname, 'dist'),
         html: path.resolve(__dirname, 'public', 'index.html'),
+        favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
         src: path.resolve(__dirname, 'src'),
         locales: path.resolve(__dirname, 'public', 'locales'),
         buildLocales: path.resolve(__dirname, 'dist', 'locales'),

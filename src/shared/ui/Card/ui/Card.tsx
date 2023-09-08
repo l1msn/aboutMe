@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, JSX, memo } from 'react';
+import React, { HTMLAttributes, JSX } from 'react';
 import classNames from '@/shared/lib/classNames/classNames';
 import CardVariant from '../consts/CardVariant';
 import cls from './Card.module.scss';
@@ -24,7 +24,7 @@ const mapPaddingToClass: Record<CardPadding, string> = {
 /**
  * @description Компонент закругленной карточки для контента
  */
-const Card: React.FC<ICardProps> = memo((props: ICardProps): JSX.Element => {
+const Card: React.FC<ICardProps> = (props: ICardProps): JSX.Element => {
     const {
         className,
         children,
@@ -50,6 +50,6 @@ const Card: React.FC<ICardProps> = memo((props: ICardProps): JSX.Element => {
             {children}
         </div>
     );
-});
+};
 
 export default Card;

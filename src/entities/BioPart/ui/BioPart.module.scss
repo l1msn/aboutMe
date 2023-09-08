@@ -1,0 +1,10 @@
+.title {
+    text-decoration: underline 4px;
+    text-underline-offset: 6px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.right {
+    flex-direction: row-reverse;
+}

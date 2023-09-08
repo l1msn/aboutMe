@@ -8,6 +8,7 @@ function webpackConfigStorybook({ config }: { config: webpack.Configuration }) {
         build: '',
         html: '',
         entry: '',
+        favicon: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
         locales: '',
         buildLocales: '',

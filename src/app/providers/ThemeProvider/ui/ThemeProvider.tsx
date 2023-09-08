@@ -11,7 +11,7 @@ interface IThemeProviderProps {
 const ThemeProvider: React.FC<IThemeProviderProps> = (props): JSX.Element => {
     const { initialTheme, children } = props;
 
-    const [theme, setTheme] = useState<Themes>(initialTheme || Themes.DARK);
+    const [theme, setTheme] = useState<Themes>(Themes.DARK);
     const [isThemeInit, setIsThemeInit] = useState<boolean>(false);
 
     useEffect(() => {

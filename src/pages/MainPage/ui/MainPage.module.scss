@@ -1,0 +1,53 @@
+.mainStackInfo {
+    @media screen and (max-width: 450px) {
+        width: 300px;
+    }
+}
+
+.bio {
+    @media screen and (max-width: 450px) {
+        width: 300px;
+    }
+}
+
+.nameWithPhoto {
+    padding-top: 15px;
+}
+
+.greeting {
+    text-align: center;
+}
+
+.links {
+    @media screen and (max-width: 450px) {
+        svg {
+            padding-left: 5px;
+        }
+    }
+}
+
+.newFoto {
+    border-right: 2px solid var(--accent);
+    min-width: 62px;
+    min-height: 22.5%;
+}
+
+.oldFoto {
+    border-left: 2px solid var(--accent);
+    min-width: 62px;
+    min-height: 22.5%;
+}
+
+.miniInfo {
+    fill: var(--icon);
+
+    @media screen and (max-width: 450px) {
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+
+        p {
+            text-align: center;
+        }
+    }
+}
