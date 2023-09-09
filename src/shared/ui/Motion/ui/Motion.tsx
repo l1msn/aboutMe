@@ -4,15 +4,17 @@ import { motion, useInView } from 'framer-motion';
 interface IMotionProps {
     children?: React.ReactNode;
     delay?: number;
+    onceMotion?: boolean;
 }
 
 const Motion: React.FC<IMotionProps> = ({
     children,
+    onceMotion = true,
     delay = 0.5,
 }: IMotionProps): JSX.Element => {
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, {
-        once: true,
+        once: onceMotion,
     });
 
     return (

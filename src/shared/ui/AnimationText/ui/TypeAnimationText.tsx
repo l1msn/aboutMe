@@ -9,31 +9,44 @@ interface ITypeAnimationTextProps {
     speed?: Speed | GranularSpeed;
     style?: React.CSSProperties;
     text: {
-        ru: string;
-        en: string;
+        ru: (string | number)[];
+        en: (string | number)[];
     };
+    repeat?: boolean;
+    cursor?: boolean;
 }
 
 const TypeAnimationText: React.FC<ITypeAnimationTextProps> = (
     props: ITypeAnimationTextProps,
 ) => {
-    const { className, style, speed, text } = props;
+    const {
+        className,
+        repeat = false,
+        cursor = true,
+        style,
+        speed,
+        text,
+    } = props;
     const { i18n } = useTranslation();
 
     return (
         <div>
             {i18n.language == 'en' && (
                 <TypeAnimation
-                    sequence={[text.en]}
+                    repeat={repeat ? Infinity : 0}
+                    sequence={text.en}
                     speed={speed}
                     style={style}
+                    cursor={cursor}
                 />
             )}
             {i18n.language == 'ru' && (
                 <TypeAnimation
-                    sequence={[text.ru]}
+                    repeat={repeat ? Infinity : 0}
+                    sequence={text.ru}
                     speed={speed}
                     style={style}
+                    cursor={cursor}
                 />
             )}
         </div>

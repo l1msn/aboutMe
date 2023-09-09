@@ -54,8 +54,8 @@ const Navbar: React.FC<INavbarProps> = ({
                                 fontSize: '22px',
                             }}
                             text={{
-                                ru: 'Александр Садыков',
-                                en: 'Alexander Sadykov',
+                                ru: ['Александр Садыков'],
+                                en: ['Alexander Sadykov'],
                             }}
                         />
                     </HStack>

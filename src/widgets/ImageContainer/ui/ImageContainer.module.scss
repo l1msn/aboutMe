@@ -6,6 +6,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-collapse: collapse;
+
+    @media screen and (max-width: 450px) {
+        height: 200px;
+    }
 
   img {
       position: absolute;

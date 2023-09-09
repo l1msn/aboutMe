@@ -5,7 +5,7 @@ import Backend from 'i18next-http-backend';
 i18n.use(Backend)
     .use(initReactI18next)
     .init({
-        fallbackLng: 'en',
+        fallbackLng: 'ru',
         debug: __IS_DEV__,
         interpolation: {
             escapeValue: false,
