@@ -12,6 +12,7 @@ import { TypeAnimation } from 'react-type-animation';
 import AppLink from '@/shared/ui/AppLink';
 import { RoutePaths } from '@/shared/consts/routerPaths';
 import { motion } from 'framer-motion';
+import TypeAnimationText from '@/shared/ui/AnimationText';
 
 interface INavbarProps {
     className?: string;
@@ -47,26 +48,16 @@ const Navbar: React.FC<INavbarProps> = ({
                                 className={cls.logoImg}
                             />
                         </motion.div>
-                        {i18n.language == 'en' && (
-                            <TypeAnimation
-                                sequence={[t('Alexander Sadykov')]}
-                                speed={50}
-                                style={{
-                                    fontSize: '23px',
-                                }}
-                                wrapper={'h1'}
-                            />
-                        )}
-                        {i18n.language == 'ru' && (
-                            <TypeAnimation
-                                sequence={[t('Александр Садыков')]}
-                                speed={50}
-                                style={{
-                                    fontSize: '22px',
-                                }}
-                                wrapper={'h1'}
-                            />
-                        )}
+                        <TypeAnimationText
+                            speed={50}
+                            style={{
+                                fontSize: '22px',
+                            }}
+                            text={{
+                                ru: 'Александр Садыков',
+                                en: 'Alexander Sadykov',
+                            }}
+                        />
                     </HStack>
                 </AppLink>
                 <HStack className={cls.additional}>

@@ -5,6 +5,9 @@
     display: flex;
 }
 
-.right {
-    flex-direction: row-reverse;
+.bioPart {
+    p {
+        line-height: 1.7em;
+        text-align: justify;
+    }
 }

@@ -15,7 +15,7 @@ const Footer: React.FC<IFooterProps> = memo(
 
         return (
             <footer className={classNames(cls.footer, {}, [className])}>
-                <Motion delay={1}>
+                <Motion>
                     <Text
                         text={t('@ 2023 Sadykov Alexader. All right Reserved.')}
                     />
