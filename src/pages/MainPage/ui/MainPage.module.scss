@@ -1,31 +1,39 @@
 .mainStackInfo {
-    @media screen and (max-width: 1000px) {
+    @media screen and (width <= 1000px) {
         width: 600px;
     }
-    @media screen and (max-width: 450px) {
+
+    @media screen and (width <= 450px) {
         width: 300px;
     }
 }
 
+.thanksContainer {
+    padding-bottom: 10px;
+}
 
 .linksContainer {
-    @media screen and (max-width: 1000px) {
+    @media screen and (width <= 1000px) {
         flex-direction: column;
     }
-    @media screen and (max-width: 450px) {
+
+    @media screen and (width <= 450px) {
         flex-direction: column;
     }
 }
 
 .bioProgramming {
-    @media screen and (max-width: 1000px) {
+    @media screen and (width <= 1000px) {
         width: 600px;
+
         div {
             flex-direction: column;
         }
     }
-    @media screen and (max-width: 450px) {
+
+    @media screen and (width <= 450px) {
         width: 300px;
+
         div {
             flex-direction: column;
         }
@@ -37,14 +45,17 @@
 }
 
 .bioWhyMe {
-    @media screen and (max-width: 1000px) {
+    @media screen and (width <= 1000px) {
         width: 600px;
+
         div {
             flex-direction: column;
         }
     }
-    @media screen and (max-width: 450px) {
+
+    @media screen and (width <= 450px) {
         width: 300px;
+
         div {
             flex-direction: column;
         }
@@ -64,12 +75,13 @@
 }
 
 .links {
-    @media screen and (max-width: 1000px) {
+    @media screen and (width <= 1000px) {
         svg {
             padding-left: 5px;
         }
     }
-    @media screen and (max-width: 450px) {
+
+    @media screen and (width <= 450px) {
         svg {
             padding-left: 5px;
         }

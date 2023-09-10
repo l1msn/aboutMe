@@ -5,14 +5,14 @@
     position: relative;
     padding-bottom: 10px;
 
-    @media screen and (min-width: 48em)  {
+    @media screen and (width >= 48em)  {
         margin-top: -120px;
         margin-bottom: -200px;
         width: 640px;
         height: 640px;
     }
 
-    @media screen and (min-width: 30em)  {
+    @media screen and (width >= 30em)  {
         margin-top: -60px;
         margin-bottom: -140px;
         width: 480px;

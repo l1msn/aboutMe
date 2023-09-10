@@ -1,7 +1,7 @@
 .footer {
-    @media screen and (max-width: 450px) {
+    @media screen and (width <= 450px) {
         p {
-          text-align: center;
+            text-align: center;
         }
     }
 }

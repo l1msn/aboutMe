@@ -1,20 +1,21 @@
 .container {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  place-content: center;
-  overflow: hidden;
-  border-radius: 12px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    place-content: center;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .item {
-  width: 50%;
-  overflow: visible;
-  stroke-width: 2;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  path {
-    stroke: var(--hint);
-    fill: var(--icon);
-  }
+    width: 50%;
+    overflow: visible;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+
+    path {
+        stroke: var(--hint);
+        fill: var(--icon);
+    }
 }

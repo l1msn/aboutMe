@@ -16,7 +16,8 @@ const Timeline: React.FC<ITimelineProps> = memo(
         const inView = useInView(ref);
         return (
             <div ref={ref}>
-                <HStack className="logo" max gap={'16'} justify={'center'}>
+                <HStack className="logo" max gap={'16'}
+justify={'center'}>
                     {inView ? (
                         <TypeAnimationText
                             speed={80}

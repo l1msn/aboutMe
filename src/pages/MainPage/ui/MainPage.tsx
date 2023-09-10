@@ -15,6 +15,7 @@ import useWindowDimensions from '@/shared/lib/hooks/useWindowDimensions/useWindo
 import Timeline from '@/entities/Timeline';
 import MainInfo from '@/entities/MainInfo';
 import ScrollToTopButton from '@/features/ScrollToTopButton';
+import VideoCSS from '@/entities/VideoCSS';
 
 const MainPage: React.FC = (): JSX.Element => {
     const { t } = useTranslation();
@@ -66,6 +67,15 @@ const MainPage: React.FC = (): JSX.Element => {
                 </VStack>
                 <VStack>
                     <Timeline />
+                </VStack>
+                <VStack className={cls.thanksContainer} max align={'center'}>
+                    <Text
+                        align={'center'}
+                        title={t(
+                            'If you want to know a cool trick about сss, watch my video',
+                        )}
+                    />
+                    <VideoCSS />
                 </VStack>
                 <Card max>
                     <VStack className={cls.thanks} gap={'16'} align={'center'}>
