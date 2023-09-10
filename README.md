@@ -70,7 +70,7 @@ npm start - запуск сервера проекта в dev режиме (Vite
 
 ### Netlify
 
-Серверная часть размещена на [Vercel](https://vercel.com) - https://comfy-cassata-231ffe.netlify.app
+Клиентская часть размещена на [Netlify](https://www.netlify.com) - https://comfy-cassata-231ffe.netlify.app
 
 ----
 
