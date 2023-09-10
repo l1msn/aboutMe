@@ -49,7 +49,7 @@ const Navbar: React.FC<INavbarProps> = ({
                             />
                         </motion.div>
                         <TypeAnimationText
-                            speed={50}
+                            speed={30}
                             style={{
                                 fontSize: '22px',
                             }}

@@ -8,14 +8,27 @@
     align-items: center;
     border-collapse: collapse;
 
-    @media screen and (max-width: 450px) {
-        height: 200px;
+    img {
+        position: absolute;
+        width: 100vw;
     }
 
-  img {
-      position: absolute;
-      max-width: 100vw;
-  }
+    @media screen and (min-width: 1000px) {
+        img {
+            position: absolute;
+            width: 45vw;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        height: 200px;
+
+        img {
+            position: absolute;
+            width: 100vw;
+        }
+    }
+
 }
 
 .next,
