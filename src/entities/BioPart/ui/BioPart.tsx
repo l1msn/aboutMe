@@ -8,7 +8,6 @@ import { VStack } from '@/shared/ui/Stack';
 interface IBioPartProps {
     className?: string;
     title?: string;
-    right?: boolean;
     children: React.ReactNode;
 }
 
@@ -16,17 +15,14 @@ const BioPart: React.FC<IBioPartProps> = ({
     className,
     title,
     children,
-    right = false,
 }: IBioPartProps): JSX.Element => {
     return (
-        <VStack align={right ? 'end' : 'start'} max gap={'8'}>
+        <VStack align={'center'} max gap={'8'}>
             {title && (
                 <Text
                     bold
                     title={title}
-                    className={classNames(cls.title, {
-                        [cls.right]: right,
-                    })}
+                    className={classNames(cls.title, {})}
                 />
             )}
             <Card className={classNames(cls.bioPart, {}, [className])}>

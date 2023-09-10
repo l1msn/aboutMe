@@ -3,16 +3,16 @@ import { ForbiddenPage } from '@/pages/ForbiddenPage';
 import { AppRoutes, RoutePaths } from '@/shared/consts/routerPaths';
 import { AppRoutesProps } from '@/shared/types/router';
 import NotFoundPage from '@/pages/NotFoundPage';
-import { CSSPage } from '@/pages/CSSPage';
+import { JSPage } from '@/pages/JSPage';
 
 const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.MAIN]: {
         path: RoutePaths.getRouteMain(),
         element: <MainPage />,
     },
-    [AppRoutes.CSS]: {
-        path: RoutePaths.getRouteCss(),
-        element: <CSSPage />,
+    [AppRoutes.JS]: {
+        path: RoutePaths.getRouteJs(),
+        element: <JSPage />,
     },
     [AppRoutes.FORBIDDEN]: {
         path: RoutePaths.getRouteForbidden(),

@@ -3,6 +3,7 @@ import cls from './SocialTab.module.scss';
 import Icon from '@/shared/ui/Icon';
 import AppLink from '@/shared/ui/AppLink';
 import Button from '@/shared/ui/Button';
+import { HStack } from '@/shared/ui/Stack';
 
 interface ISocialTabProps {
     icon?: React.VFC<React.SVGProps<SVGSVGElement>>;
@@ -14,14 +15,14 @@ interface ISocialTabProps {
 const SocialTab: React.FC<ISocialTabProps> = memo(
     ({ icon, content, to, motionIcon }: ISocialTabProps): JSX.Element => {
         return (
-            <Button variant={'accept'} className={cls.icon}>
-                {icon && <Icon Svg={icon} />}
-                {motionIcon && motionIcon}
-                {content && (
-                    <AppLink target="_blank" to={to}>
+            <Button variant={'filled'} className={cls.icon}>
+                <AppLink target="_blank" to={to}>
+                    <HStack max justify={'between'}>
+                        {icon && <Icon Svg={icon} />}
+                        {motionIcon}
                         {content}
-                    </AppLink>
-                )}
+                    </HStack>
+                </AppLink>
             </Button>
         );
     },

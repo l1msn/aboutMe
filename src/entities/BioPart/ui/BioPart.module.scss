@@ -3,8 +3,12 @@
     text-underline-offset: 6px;
     justify-content: space-between;
     display: flex;
+    text-align: center;
 }
 
-.right {
-    flex-direction: row-reverse;
+.bioPart {
+    p {
+        line-height: 1.7em;
+        text-align: justify;
+    }
 }

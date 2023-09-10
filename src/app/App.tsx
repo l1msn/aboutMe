@@ -6,6 +6,7 @@ import { VStack } from '@/shared/ui/Stack';
 import Preloader from '@/widgets/Preloader';
 import CircleIndicator from '@/widgets/CircleIndicator';
 import Footer from '@/widgets/Footer';
+import ScrollToTopButton from '@/features/ScrollToTopButton';
 
 interface IAppProps {
     className?: string;
@@ -45,6 +46,7 @@ const App: React.FC<IAppProps> = ({ className }: IAppProps): JSX.Element => {
                     <VStack max align={'center'}>
                         <Navbar />
                         <AppRouter />
+                        <ScrollToTopButton />
                         <Footer />
                     </VStack>
                 </div>

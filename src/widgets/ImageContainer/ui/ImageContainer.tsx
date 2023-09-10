@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
-import images from '@/shared/assets/image-data';
 import cls from './ImageContainer.module.scss';
 
 const variants = {
@@ -31,7 +30,11 @@ const swipePower = (offset: number, velocity: number) => {
     return Math.abs(offset) * velocity;
 };
 
-const ImageContainer = () => {
+interface IImageContainerProps {
+    images: any[];
+}
+
+const ImageContainer = ({ images }: IImageContainerProps) => {
     const [[page, direction], setPage] = useState([0, 0]);
 
     const imageIndex = wrap(0, images.length, page);

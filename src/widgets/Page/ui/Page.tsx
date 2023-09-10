@@ -1,11 +1,11 @@
 import React, { JSX } from 'react';
 import classNames from '@/shared/lib/classNames/classNames';
 import cls from './Page.module.scss';
-import useAppDispatch from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { useLocation } from 'react-router-dom';
 import PAGE_ID from '@/shared/consts/ids';
 import TestProps from '@/shared/types/tests';
 import Motion from '@/shared/ui/Motion';
+import { HStack, VStack } from '@/shared/ui/Stack';
+import ScrollToTopButton from '@/features/ScrollToTopButton';
 
 interface IPageProps extends TestProps {
     className?: string;
@@ -14,7 +14,7 @@ interface IPageProps extends TestProps {
 }
 
 const Page: React.FC<IPageProps> = (props: IPageProps): JSX.Element => {
-    const { className, children, onScrollEnd } = props;
+    const { className, children } = props;
 
     return (
         <Motion>
