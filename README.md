@@ -1,10 +1,10 @@
 # 
 <div align="center">
 <img alt="Static Badge" src="https://img.shields.io/badge/build-passing-brightgreen">
-<img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/m/l1msn/social">
-<img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/l1msn/social">
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/l1msn/social">
-<img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/l1msn/social/master">
+<img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/m/l1msn/aboutMe">
+<img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/l1msn/aboutMe">
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/l1msn/aboutMe">
+<img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/l1msn/aboutMe/master">
 </div>
 
 ## Оглавление
