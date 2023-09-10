@@ -15,7 +15,7 @@ interface ISocialTabProps {
 const SocialTab: React.FC<ISocialTabProps> = memo(
     ({ icon, content, to, motionIcon }: ISocialTabProps): JSX.Element => {
         return (
-            <Button variant={'accept'} className={cls.icon}>
+            <Button variant={'filled'} className={cls.icon}>
                 <AppLink target="_blank" to={to}>
                     <HStack max justify={'between'}>
                         {icon && <Icon Svg={icon} />}

@@ -65,109 +65,114 @@ const MainPage: React.FC = (): JSX.Element => {
                 <VStack>
                     <Timeline />
                 </VStack>
-                <VStack className={cls.thanks} gap={'16'} align={'center'}>
-                    <Card>
-                        <Text
-                            align={'center'}
-                            title={t(
-                                'Thank you for being there and getting to know me better.',
-                            )}
-                        />
-                    </Card>
-                    <HStack
-                        className={cls.linksContainer}
-                        justify={'between'}
-                        gap={'16'}
-                    >
+                <Card max>
+                    <VStack className={cls.thanks} gap={'16'} align={'center'}>
                         <Card>
-                            <VStack gap={'8'} align={'center'}>
-                                <Text text={t('Social')} align={'center'} />
-                                <HStack
-                                    className={cls.links}
-                                    max
-                                    gap={'32'}
-                                    justify={'center'}
-                                >
-                                    <SocialTab
-                                        to={'https://t.me/L1msn'}
-                                        motionIcon={
-                                            <MotionIcon
-                                                pathMotion={
-                                                    'M 12 -3 L -2 3 L 4 5 L 4 5 L 4 5 L 6 11 L 12 -3'
-                                                }
-                                            />
-                                        }
-                                        content={
-                                            width > 450
-                                                ? t('Telegram')
-                                                : undefined
-                                        }
-                                    />
-                                    <SocialTab
-                                        to={'mailto:italexanders@gmail.com'}
-                                        motionIcon={
-                                            <MotionIcon
-                                                pathMotion={
-                                                    'M 0 0 L 0 9 L 0 9 H 14 L 14 0 L 7 4 L 7 4 L 0 0'
-                                                }
-                                            />
-                                        }
-                                        content={
-                                            width > 450 ? t('Email') : undefined
-                                        }
-                                    />
-                                </HStack>
-                            </VStack>
+                            <Text
+                                align={'center'}
+                                title={t(
+                                    'Thank you for being there and getting to know me better.',
+                                )}
+                            />
                         </Card>
-                        <Card>
-                            <VStack gap={'8'} align={'center'}>
-                                <Text
-                                    text={t('Hard-skills')}
-                                    align={'center'}
-                                />
-                                <HStack
-                                    className={cls.links}
-                                    max
-                                    gap={'32'}
-                                    justify={'center'}
-                                >
-                                    <SocialTab
-                                        to={'https://github.com/l1msn'}
-                                        motionIcon={
-                                            <MotionIcon
-                                                pathMotion={
-                                                    'M 7 0 C -3 -2 -3 12 7 10 l 0 -4 l -3 0'
-                                                }
-                                            />
-                                        }
-                                        content={
-                                            width > 450
-                                                ? t('GitHub')
-                                                : undefined
-                                        }
+
+                        <HStack
+                            className={cls.linksContainer}
+                            justify={'between'}
+                            gap={'16'}
+                        >
+                            <Card>
+                                <VStack gap={'8'} align={'center'}>
+                                    <Text text={t('Social')} align={'center'} />
+                                    <HStack
+                                        className={cls.links}
+                                        max
+                                        gap={'32'}
+                                        justify={'center'}
+                                    >
+                                        <SocialTab
+                                            to={'https://t.me/L1msn'}
+                                            motionIcon={
+                                                <MotionIcon
+                                                    pathMotion={
+                                                        'M 12 -3 L -2 3 L 4 5 L 4 5 L 4 5 L 6 11 L 12 -3'
+                                                    }
+                                                />
+                                            }
+                                            content={
+                                                width > 450
+                                                    ? t('Telegram')
+                                                    : undefined
+                                            }
+                                        />
+                                        <SocialTab
+                                            to={'mailto:italexanders@gmail.com'}
+                                            motionIcon={
+                                                <MotionIcon
+                                                    pathMotion={
+                                                        'M 0 0 L 0 9 L 0 9 H 14 L 14 0 L 7 4 L 7 4 L 0 0'
+                                                    }
+                                                />
+                                            }
+                                            content={
+                                                width > 450
+                                                    ? t('Email')
+                                                    : undefined
+                                            }
+                                        />
+                                    </HStack>
+                                </VStack>
+                            </Card>
+                            <Card>
+                                <VStack gap={'8'} align={'center'}>
+                                    <Text
+                                        text={t('Hard-skills')}
+                                        align={'center'}
                                     />
-                                    <SocialTab
-                                        to={
-                                            'https://drive.google.com/file/d/1dJpyjpR03_uOZ1Yl3j4NiNmuB5vCIgWD/view?usp=sharing'
-                                        }
-                                        motionIcon={
-                                            <MotionIcon
-                                                pathMotion={
-                                                    'M 0 0 L 0 9 L 0 10 H 10 L 10 3 L 10 1 L 7 -2 L 0 -2'
-                                                }
-                                            />
-                                        }
-                                        content={
-                                            width > 450
-                                                ? t('Portfolio')
-                                                : undefined
-                                        }
-                                    />
-                                </HStack>
-                            </VStack>
-                        </Card>
-                    </HStack>
-                </VStack>
+                                    <HStack
+                                        className={cls.links}
+                                        max
+                                        gap={'32'}
+                                        justify={'center'}
+                                    >
+                                        <SocialTab
+                                            to={'https://github.com/l1msn'}
+                                            motionIcon={
+                                                <MotionIcon
+                                                    pathMotion={
+                                                        'M 7 0 C -3 -2 -3 12 7 10 l 0 -4 l -3 0'
+                                                    }
+                                                />
+                                            }
+                                            content={
+                                                width > 450
+                                                    ? 'GitHub'
+                                                    : undefined
+                                            }
+                                        />
+                                        <SocialTab
+                                            to={
+                                                'https://drive.google.com/file/d/1dJpyjpR03_uOZ1Yl3j4NiNmuB5vCIgWD/view?usp=sharing'
+                                            }
+                                            motionIcon={
+                                                <MotionIcon
+                                                    pathMotion={
+                                                        'M 0 0 L 0 9 L 0 10 H 10 L 10 3 L 10 1 L 7 -2 L 0 -2'
+                                                    }
+                                                />
+                                            }
+                                            content={
+                                                width > 450
+                                                    ? t('Resume')
+                                                    : undefined
+                                            }
+                                        />
+                                    </HStack>
+                                </VStack>
+                            </Card>
+                        </HStack>
+                    </VStack>
+                </Card>
             </VStack>
         </Page>
     );

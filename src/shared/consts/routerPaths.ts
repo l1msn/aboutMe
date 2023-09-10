@@ -1,6 +1,6 @@
 enum AppRoutes {
     MAIN = 'main',
-    CSS = 'CSS',
+    JS = 'js',
     FORBIDDEN = 'forbidden',
     NOT_FOUND = 'not_found',
 }
@@ -9,8 +9,8 @@ class RoutePaths {
     static getRouteMain() {
         return '/';
     }
-    static getRouteCss() {
-        return '/css';
+    static getRouteJs() {
+        return '/js';
     }
     static getRouteForbidden() {
         return '/forbidden';
@@ -19,7 +19,7 @@ class RoutePaths {
 
 const AppRouteByPathPattern: Record<string, AppRoutes> = {
     [RoutePaths.getRouteMain()]: AppRoutes.MAIN,
-    [RoutePaths.getRouteCss()]: AppRoutes.CSS,
+    [RoutePaths.getRouteJs()]: AppRoutes.JS,
     [RoutePaths.getRouteForbidden()]: AppRoutes.FORBIDDEN,
 };
 
