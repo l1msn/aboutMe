@@ -7,12 +7,14 @@ import { Text } from '@/shared/ui/Text';
 import cls from './MainPage.module.scss';
 import BioPart from '@/entities/BioPart';
 import ImageContainer from '@/widgets/ImageContainer';
-import imagesOld from '@/shared/assets/image-data';
+import imagesOld from '@/shared/assets/image-data-old';
+import imagesNew from '@/shared/assets/image-data-new';
 import SocialTab from '@/entities/SocialTab';
 import MotionIcon from '@/shared/ui/MotionIcon';
 import useWindowDimensions from '@/shared/lib/hooks/useWindowDimensions/useWindowDimensions';
 import Timeline from '@/entities/Timeline';
 import MainInfo from '@/entities/MainInfo';
+import ScrollToTopButton from '@/features/ScrollToTopButton';
 
 const MainPage: React.FC = (): JSX.Element => {
     const { t } = useTranslation();
@@ -52,7 +54,7 @@ const MainPage: React.FC = (): JSX.Element => {
                 <VStack className={cls.bioWhyMe} gap={'16'}>
                     <div></div>
                     <HStack justify={'between'} gap={'16'} max>
-                        <ImageContainer images={imagesOld} />
+                        <ImageContainer images={imagesNew} />
                         <BioPart title={t('Why me?')}>
                             <p>
                                 {t(
@@ -173,6 +175,9 @@ const MainPage: React.FC = (): JSX.Element => {
                         </HStack>
                     </VStack>
                 </Card>
+            </VStack>
+            <VStack gap={'16'} max align={'center'} justify={'center'}>
+                <ScrollToTopButton />
             </VStack>
         </Page>
     );

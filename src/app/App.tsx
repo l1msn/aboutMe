@@ -46,7 +46,6 @@ const App: React.FC<IAppProps> = ({ className }: IAppProps): JSX.Element => {
                     <VStack max align={'center'}>
                         <Navbar />
                         <AppRouter />
-                        <ScrollToTopButton />
                         <Footer />
                     </VStack>
                 </div>
