@@ -38,7 +38,7 @@
 
 | Стэк         | Технологии                                   |
 |--------------|----------------------------------------------|
-| Клиентская часть | TypeScript, SCSS, HTML, React, Framer Motion |
+| Клиентская часть | TypeScript, SCSS, HTML, React, Framer Motion, ThreeJS |
 | Сборщики | Webpack, Vite                                |
 | Линтеры/Форматирование | ESLint, StyleLint, Prettier                  |
 | Дополнительно | Babel, i18n                                  |
